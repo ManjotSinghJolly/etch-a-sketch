@@ -58,10 +58,12 @@ gridBtn.addEventListener("click", function () {
 //Selecting boxes to draw on hover
 const boxes = document.querySelectorAll(".box");
 
+// Draw button
+
 //Draw on Hover
 boxes.forEach(function (box) {
   box.addEventListener("mouseover", function () {
-    box.style.backgroundColor = "black";
+    box.style.backgroundColor = "red";
   });
 });
 
