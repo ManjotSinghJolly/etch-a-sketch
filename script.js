@@ -45,7 +45,7 @@ makeGrid(size);
 //   container.append(div);
 // }
 
-// selecting the button
+// selecting the Grid Change button
 const gridBtn = document.getElementById("button");
 gridBtn.addEventListener("click", function () {
   // let size = prompt("Enter the size of the grid");
@@ -55,11 +55,23 @@ gridBtn.addEventListener("click", function () {
   //
 });
 
+//Selecting boxes to draw on hover
 const boxes = document.querySelectorAll(".box");
 
 //Draw on Hover
 boxes.forEach(function (box) {
   box.addEventListener("mouseover", function () {
     box.style.backgroundColor = "black";
+  });
+});
+
+//Erase functionality
+const eraser = document.getElementById("erase");
+eraser.addEventListener("click", function () {
+  console.log("I think the erase button was really clicked this time.");
+  boxes.forEach(function (box) {
+    box.addEventListener("mouseover", function () {
+      box.style.backgroundColor = "white";
+    });
   });
 });
