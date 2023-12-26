@@ -58,12 +58,12 @@ gridBtn.addEventListener("click", function () {
 //Selecting boxes to draw on hover
 const boxes = document.querySelectorAll(".box");
 
-//Draw on Hover
-boxes.forEach(function (box) {
-  box.addEventListener("mouseover", function () {
-    box.style.backgroundColor = color;
-  });
-});
+// //Draw on Hover
+// boxes.forEach(function (box) {
+//   box.addEventListener("mouseover", function () {
+//     box.style.backgroundColor = color;
+//   });
+// });
 
 //Erase functionality
 const eraser = document.getElementById("erase");
@@ -83,6 +83,11 @@ const colorPicker = document.getElementById("colour-picker");
 //Click function for the colour picker
 colorPicker.addEventListener("change", function (colorValue) {
   color = colorValue.target.value;
+  boxes.forEach(function (box) {
+    box.addEventListener("mouseover", function () {
+      box.style.backgroundColor = color;
+    });
+  });
   // console.log("The value of the new color is: " + color);
 });
 
@@ -147,7 +152,7 @@ function generateRandomColor() {
 
 // console.log("Okay, The color option is: " + resultColor);
 
-//Rainbow mode
+//Rainbow Mode Button
 let rainbowButton = document.getElementById("rainbow");
 rainbowButton.addEventListener("click", function () {
   boxes.forEach(function (box) {
@@ -155,5 +160,13 @@ rainbowButton.addEventListener("click", function () {
       let resultColor = generateRandomColor();
       box.style.backgroundColor = resultColor;
     });
+  });
+});
+
+//Reset Grid button
+let resetButton = document.getElementById("reset");
+resetButton.addEventListener("click", function () {
+  boxes.forEach(function (box) {
+    box.style.backgroundColor = "#fff";
   });
 });
