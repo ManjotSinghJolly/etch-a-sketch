@@ -58,12 +58,10 @@ gridBtn.addEventListener("click", function () {
 //Selecting boxes to draw on hover
 const boxes = document.querySelectorAll(".box");
 
-// Draw button
-
 //Draw on Hover
 boxes.forEach(function (box) {
   box.addEventListener("mouseover", function () {
-    box.style.backgroundColor = "red";
+    box.style.backgroundColor = color;
   });
 });
 
@@ -77,3 +75,15 @@ eraser.addEventListener("click", function () {
     });
   });
 });
+
+//Colour Functionality
+let color;
+const colorPicker = document.getElementById("colour-picker");
+// console.log("The value of the color selected is: " + colorPicker);
+//Click function for the colour picker
+colorPicker.addEventListener("change", function (colorValue) {
+  color = colorValue.target.value;
+  console.log("The value of the new color is: " + color);
+});
+
+//Rainbow mode
