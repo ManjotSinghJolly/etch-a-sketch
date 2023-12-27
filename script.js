@@ -170,3 +170,14 @@ resetButton.addEventListener("click", function () {
     box.style.backgroundColor = "#fff";
   });
 });
+
+// let rgbaValue = 0;
+boxes.forEach(function (box) {
+  console.log(box);
+  let rgbaValue = 0;
+  box.addEventListener("mouseover", function () {
+    rgbaValue += 0.1;
+
+    box.style.backgroundColor = `rgba(0, 0, 0, ${rgbaValue})`;
+  });
+});
