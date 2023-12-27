@@ -1,3 +1,12 @@
+//Asking the user for the grid size in the prompt
+let size = prompt("Enter the size of the grid. The max size is 100");
+size = Number(size);
+while (size > 100) {
+  size = prompt("Enter the size of the grid. The max size is 100");
+  size = Number(size);
+}
+makeGrid(size);
+
 function makeGrid(gridSize) {
   const body = document.body;
   const container = document.createElement("div");
@@ -19,11 +28,6 @@ function makeGrid(gridSize) {
     container.append(div);
   }
 }
-
-//Asking the user for the grid size in the prompt
-let size = prompt("Enter the size of the grid");
-size = Number(size);
-makeGrid(size);
 
 // const body = document.body;
 // const container = document.createElement("div");
@@ -172,8 +176,9 @@ resetButton.addEventListener("click", function () {
 });
 
 // let rgbaValue = 0;
+//Progressive Shading
 boxes.forEach(function (box) {
-  console.log(box);
+  // console.log(box);
   let rgbaValue = 0;
   box.addEventListener("mouseover", function () {
     rgbaValue += 0.1;
