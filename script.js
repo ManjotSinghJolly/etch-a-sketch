@@ -50,7 +50,7 @@ function makeGrid(gridSize) {
 // }
 
 // selecting the Grid Change button
-const gridBtn = document.getElementById("button");
+const gridBtn = document.getElementById("change-grid");
 gridBtn.addEventListener("click", function () {
   // let size = prompt("Enter the size of the grid");
   // size = Number(size);
