@@ -38,7 +38,7 @@ function makeGrid(gridSize) {
 //Selecting boxes to draw on hover
 const boxes = document.querySelectorAll(".box");
 
-//Progressive Shading
+//Progressive Shading on hovering
 boxes.forEach(function (box) {
   let rgbaValue = 0;
 
