@@ -1,8 +1,8 @@
 //Asking the user for the grid size in the prompt
-let size = prompt("Enter the size of the grid. The max size is 100");
+let size = prompt("Enter the size of the grid. The max size is 100.");
 size = Number(size);
 while (size > 100) {
-  size = prompt("Enter the size of the grid. The max size is 100");
+  size = prompt("Enter the size of the grid. The max size is 100.");
   size = Number(size);
 }
 makeGrid(size);
