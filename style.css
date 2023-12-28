@@ -1,31 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+
 * {
   margin: 0px;
   padding: 0px;
 }
 
-#change-grid {
-  border: 1px solid black;
+body {
+  background-color: #4d3227;
 }
 
-#rainbow {
-  border: 1px solid black;
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-size: 50px;
+  color: #cd7700;
+  font-family: "Silkscreen";
 }
 
-#erase {
-  border: 1px solid black;
+#layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
 }
 
-#reset {
-  border: 1px solid black;
+#button-container {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  height: 500px;
+  align-items: center;
+  padding: 50px;
+  gap: 40px;
+  margin-left: -300px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-color: #ebc999;
 }
+
+#colour-picker {
+  height: 100px;
+  width: 100px;
+}
+
+.ui-button {
+  border: 4px solid #cd7700;
+  width: 135px;
+  height: 50px;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 9px #999;
+  font-family: "Silkscreen";
+  font-size: 15px;
+  color: #fff;
+  background-color: #4d3227;
+}
+
+.ui-button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 .box {
   border: 1px solid black;
   box-sizing: border-box;
 }
+
 .main-container {
-  border: 3px solid red;
+  border: 10px solid #cd7700;
   width: 500px;
   height: 500px;
   display: flex;
   flex-wrap: wrap;
+  background-color: white;
+}
+
+footer {
+  text-align: center;
+  padding-top: 70px;
+  font-family: "Silkscreen";
+  color: white;
 }
