@@ -25,7 +25,7 @@ function makeGrid(gridSize) {
 
     div.setAttribute("width", "boxWidth");
     div.setAttribute("height", "boxHeight");
-    // div.textContent = "haha";
+
     div.classList.add("box");
 
     container.append(div);
