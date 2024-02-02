@@ -9,7 +9,7 @@ makeGrid(size);
 
 function makeGrid(gridSize) {
   const body = document.body;
-  // body.style.backgroundColor = "pink";
+
   const container = document.createElement("div");
   container.classList.add("main-container");
   const mainLayout = document.getElementById("layout");
@@ -30,7 +30,6 @@ function makeGrid(gridSize) {
 
     container.append(div);
 
-    // box.append(container);
     mainLayout.append(container);
   }
 }
